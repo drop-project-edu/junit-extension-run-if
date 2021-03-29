@@ -27,4 +27,10 @@ Include the following dependency on your pom file:
         public void test02() {
             // this test only runs if test01 passes
         }
+        
+        @Test
+        @RunIf({"test01", "test02"})
+        public void test03() {
+            // this test only runs if test01 and test02 passes
+        }
     }

@@ -37,4 +37,10 @@ public class TestClass1 {
     public void test02() {
         assertTrue(true);
     }
+
+    @Test
+    @RunIf({"test01", "test02"})
+    public void test03() {
+        assertTrue(true);
+    }
 }
